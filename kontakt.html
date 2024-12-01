@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Flimando - Kontakt & Impressum</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta name="description" content="Kontaktieren Sie uns für Unterstützung oder allgemeine Anfragen.">
+    <meta name="keywords" content="Kontakt, Impressum, Flimando">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Verknüpfung mit dem CSS-Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/6c87b0699f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index"><img src="logo.png" alt="Flimando Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index">Startseite</a></li>
+                <li><a href="produkte">Produkte</a></li>
+                <li><a href="support">Support & FAQs</a></li>
+                <li><a href="dashboard">Benutzerbereich</a></li>
+                <li><a href="https://panel.flimando.com/">Panel</a></li>
+                <li><a href="kontakt">Kontakt</a></li>
+                <li><a href="impressum">Impressum</a></li>
+                <li><a href="agb">AGB</a></li>
+                <li><a href="datenschutz">Datenschutz</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hauptinhalt -->
+    <main>
+        <section class="contact">
+            <h1>Kontaktieren Sie uns</h1>
+            <form action="send_message.php" method="post" class="contact-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">E-Mail</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Nachricht</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Nachricht senden</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>Flimando Hosting</h3>
+                <p>Flimando ist Ihr zuverlässiger Hosting-Anbieter für leistungsstarke Game-Server.</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Nützliche Links</h3>
+                <ul>
+                    <li><a href="produkte">Produkte</a></li>
+                    <li><a href="support">Support</a></li>
+                    <li><a href="kontakt">Kontakt</a></li>
+                    <li><a href="impressum">Impressum</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social">
+                <h3>Folgen Sie uns</h3>
+                <a href="https://discord.gg/kgJV8tK932" target="_blank"><i class="fab fa-discord" alt="Discord Logo"></i></a>
+                <a href="https://twitter.com/flimando_dach" target="_blank"><i class="fab fa-twitter" alt="Twitter Logo"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Flimando Game-Hosting. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript-Datei -->
+    <script src="script.js"></script>
+</body>
+</html>

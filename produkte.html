@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Flimando - Unsere Produkte</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta charset="UTF-8">
+    <meta name="description" content="Mieten Sie leistungsstarke Server für Minecraft, Satisfactory und Teamspeak bei Flimando.">
+    <meta name="keywords" content="Minecraft-Server mieten, Satisfactory-Server Hosting, Teamspeak-Server">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Verknüpfung mit dem CSS-Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/6c87b0699f.js" crossorigin="anonymous"></script>
+    <style>
+        @media (max-width: 768px) {
+            .product-cards {
+                overflow: hidden;
+                white-space: nowrap;
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                scroll-snap-type: x mandatory;
+                overflow-x: auto;
+            }
+            .product-card {
+                flex: 0 0 auto;
+                width: 80%;
+                scroll-snap-align: start;
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="logo.png" alt="Flimando Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index">Startseite</a></li>
+                <li><a href="produkte">Produkte</a></li>
+                <li><a href="support">Support & FAQs</a></li>
+                <li><a href="dashboard">Benutzerbereich</a></li>
+                <li><a href="https://panel.flimando.com/">Panel</a></li>
+                <li><a href="kontakt">Kontakt</a></li>
+                <li><a href="impressum">Impressum</a></li>
+                <li><a href="agb">AGB</a></li>
+                <li><a href="datenschutz">Datenschutz</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hauptinhalt -->
+    <main>
+        <section class="products">
+            <h1>Unsere Server-Angebote</h1>
+            <div class="product-cards">
+                <!-- Minecraft Server -->
+                <div class="product-card">
+                    <h2>Minecraft Server</h2>
+                    <p>Ab 5€ pro Monat</p>
+                    <ul>
+                        <li>Unbegrenzte Slots</li>
+                        <li>Vollständiger FTP-Zugang</li>
+                        <li>DDOS-Schutz</li>
+                    </ul>
+                    <button class="rent-button" data-product="minecraft">Jetzt mieten</button>
+                </div>
+                <!-- Satisfactory Server -->
+                <div class="product-card">
+                    <h2>Satisfactory Server</h2>
+                    <p>Ab 7€ pro Monat</p>
+                    <ul>
+                        <li>Hohe Leistung</li>
+                        <li>Automatische Backups</li>
+                        <li>Mod-Unterstützung</li>
+                    </ul>
+                    <button class="rent-button" data-product="satisfactory">Jetzt mieten</button>
+                </div>
+                <!-- Teamspeak Server -->
+                <div class="product-card">
+                    <h2>Teamspeak Server</h2>
+                    <p>Ab 3€ pro Monat</p>
+                    <ul>
+                        <li>Hohe Audioqualität</li>
+                        <li>24/7 Uptime</li>
+                        <li>Einfache Verwaltung</li>
+                    </ul>
+                    <button class="rent-button" data-product="teamspeak">Jetzt mieten</button>
+                </div>
+                <!-- Weitere Server -->
+                <div class="product-card">
+                    <h2>GTA 5 RP Server</h2>
+                    <p>Ab pro Monat</p>
+                    <ul>
+                        <li>Hohe Leistung</li>
+                        <li>Automatische Backups</li>
+                        <li>100GB Speicherplatz</li>
+                    </ul>
+                    <button class="rent-button" data-product="gta-server">Jetzt mieten</button>
+                </div>
+                <div class="product-card">
+                    <h2>Asseto Corsa</h2>
+                    <p>Ab pro Monat</p>
+                    <ul>
+                        <li>Hohe Leistung</li>
+                        <li>Hohe Details</li>
+                        <li>Mod-Kompatibel</li>
+                    </ul>
+                    <button class="rent-button" data-product="asseto-corsa">Jetzt mieten</button>
+                </div>
+                <div class="product-card">
+                    <h2>Counter Strike 2</h2>
+                    <p>Ab pro Monat</p>
+                    <ul>
+                        <li>Integrierter Voicechat</li>
+                        <li>Automatische Backups</li>
+                        <li>Wie viele Hs hat Meerschweinchen!?</li>
+                    </ul>
+                    <button class="rent-button" data-product="counter-strike-2">Jetzt mieten</button>
+                </div>
+                <div class="product-card">
+                    <h2>Palworld</h2>
+                    <p>Ab pro Monat</p>
+                    <ul>
+                        <li>Starke Leistung</li>
+                        <li>Hervorangende Qualität</li>
+                        <li>100GB Speicherplatz</li>
+                    </ul>
+                    <button class="rent-button" data-product="palworld">Jetzt mieten</button>
+                </div>
+                <div class="product-card">
+                    <h2>RedM</h2>
+                    <p>Ab pro Monat</p>
+                    <ul>
+                        <li>Hohe Leistung</li>
+                        <li>Automatische Backups</li>
+                        <li>100GB Speicherplatz</li>
+                    </ul>
+                    <button class="rent-button" data-product="redm">Jetzt mieten</button>
+                </div>
+                <div class="product-card">
+                    <h2>Rust</h2>
+                    <p>Ab pro Monat</p>
+                    <ul>
+                        <li>Einzigartige Verwaltung</li>
+                        <li>Automatische Backups</li>
+                        <li>Grosser Speicher</li>
+                    </ul>
+                    <button class="rent-button" data-product="rust-autowipe">Jetzt mieten</button>
+                </div>
+                <div class="product-card">
+                    <h2>Sons of the Forest</h2>
+                    <p>Ab pro Monat</p>
+                    <ul>
+                        <li>Grose Welt zu, entdecken</li>
+                        <li>Automatische Backups</li>
+                        <li>100GB Speicherplatz</li>
+                    </ul>
+                    <button class="rent-button" data-product="sons-of-the-forest">Jetzt mieten</button>
+                </div>
+                <div class="product-card">
+                    <h2>The Forest</h2>
+                    <p>Ab pro Monat</p>
+                    <ul>
+                        <li>Grose Welt zu, entdecken</li>
+                        <li>Automatische Backups</li>
+                        <li>100GB Speicherplatz</li>
+                    </ul>
+                    <button class="rent-button" data-product="the-forest">Jetzt mieten</button>
+                </div>
+                <div class="product-card">
+                    <h2>Coding</h2>
+                    <p>Ab pro Monat</p>
+                    <ul>
+                        <li>Sprachen wie Python, HTML, Javascript, Java, CSS und viele witere</li>
+                        <li>Automatische Backups</li>
+                        <li>100GB Speicherplatz</li>
+                    </ul>
+                    <button class="rent-button" data-product="coding">Jetzt mieten</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>Flimando Hosting</h3>
+                <p>Flimando ist Ihr zuverlässiger Hosting-Anbieter für leistungsstarke Game-Server.</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Nützliche Links</h3>
+                <ul>
+                    <li><a href="produkte">Produkte</a></li>
+                    <li><a href="support">Support</a></li>
+                    <li><a href="kontakt">Kontakt</a></li>
+                    <li><a href="impressum">Impressum</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social">
+                <h3>Folgen Sie uns</h3>
+                <a href="https://discord.gg/kgJV8tK932" target="_blank"><i class="fab fa-discord" alt="Discord Logo"></i></a>
+                <a href="https://twitter.com/flimando_dach" target="_blank"><i class="fab fa-twitter" alt="Twitter Logo"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Flimando Game-Hosting. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript-Datei -->
+    <script src="script.js"></script>
+</body>
+</html>

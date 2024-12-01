@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Flimando - Benutzerbereich</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta charset="UTF-8">
+    <meta name="description" content="Verwalten Sie Ihre gemieteten Server und überwachen Sie den Serverstatus.">
+    <meta name="keywords" content="Benutzerbereich, Dashboard, Server verwalten, Flimando">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Verknüpfung mit dem CSS-Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://kit.fontawesome.com/6c87b0699f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index"><img src="logo.png" alt="Flimando Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index">Startseite</a></li>
+                <li><a href="produkte">Produkte</a></li>
+                <li><a href="support">Support & FAQs</a></li>
+                <li><a href="dashboard">Benutzerbereich</a></li>
+                <li><a href="https://panel.flimando.com/">Panel</a></li>
+                <li><a href="kontakt">Kontakt</a></li>
+                <li><a href="impressum">Impressum</a></li>
+                <li><a href="agb">AGB</a></li>
+                <li><a href="datenschutz">Datenschutz</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hauptinhalt -->
+    <main>
+        <section class="dashboard">
+            <h1>Willkommen, [Benutzername]</h1>
+            <!-- Live-Status-Anzeige -->
+            <div class="server-status">
+                <h2>Ihr Server-Status</h2>
+                <div class="status-card">
+                    <h3>Minecraft Server #12345</h3>
+                    <p>Status: <span id="server-status">Läuft</span></p>
+                    <button id="restart-button">Server neu starten</button>
+                </div>
+                <!-- Weitere Server-Karten, falls der Benutzer mehrere Server hat -->
+            </div>
+
+            <!-- Discord-Integration -->
+            <div>
+                <iframe title="Discord Server Vorschau" src="https://discord.com/widget?id=1028678604852310097&theme=dark" width="350" height="350" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>Flimando Hosting</h3>
+                <p>Flimando ist Ihr zuverlässiger Hosting-Anbieter für leistungsstarke Game-Server.</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Nützliche Links</h3>
+                <ul>
+                    <li><a href="produkte">Produkte</a></li>
+                    <li><a href="support">Support</a></li>
+                    <li><a href="kontakt">Kontakt</a></li>
+                    <li><a href="impressum">Impressum</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social">
+                <h3>Folgen Sie uns</h3>
+                <a href="https://discord.gg/kgJV8tK932" target="_blank"><i class="fab fa-discord" alt="Discord Logo"></i></a>
+                <a href="https://twitter.com/flimando_dach" target="_blank"><i class="fab fa-twitter" alt="Twitter Logo"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Flimando Game-Hosting. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript-Datei -->
+    <script src="script.js"></script>
+</body>
+</html>

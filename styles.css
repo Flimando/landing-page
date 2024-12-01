@@ -1,0 +1,769 @@
+/* Allgemeine Stile */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a1a; /* Dunkler Hintergrund */
+    color: #ffffff; /* Weißer Text */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navigation */
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #352f36; /* Angegebener Farbcode */
+    padding: 0 20px;
+}
+
+.logo img {
+    height: 50px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo img:hover {
+    transform: rotate(360deg);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links li a {
+    color: #ffffff;
+    padding: 20px 0;
+    display: block;
+    border-bottom:  2px solid #352f36;
+    transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+}
+
+.nav-links li a:hover {
+    color: #9b59b6; /* Akzentfarbe für Hover */ 
+    border-bottom:  2px solid #9b59b6;
+}
+
+/* Menü-Toggle für mobile Ansicht */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background-color: #ffffff;
+    margin: 4px 0;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.menu-toggle:hover span {
+    background-color: #9b59b6;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #352f36;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+/* Hero-Sektion */
+.hero {
+    background-image: url('hero.webp');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    text-align: center;
+    padding: 150px 20px;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(53, 47, 54, 0.7); /* Leichte Verdunkelung */
+}
+
+.hero h1,
+.hero p,
+.hero .cta-button {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.hero p {
+    font-size: 1.5em;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.cta-button {
+    background-color: #9b59b6; /* Akzentfarbe */
+    color: #ffffff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    margin-top: 30px;
+    display: inline-block;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: #8e44ad;
+    transform: scale(1.05);
+}
+
+/* Vorteile */
+.benefits {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #1a1a1a;
+}
+
+.benefits h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #ffffff;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.benefit-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.benefit-cards .card {
+    background-color: #2c2c2c;
+    margin: 15px;
+    padding: 30px 20px;
+    border-radius: 5px;
+    flex: 1 1 200px;
+    max-width: 250px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.benefit-cards .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.benefit-cards .card h3 {
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.benefit-cards .card p {
+    color: #bfbfbf;
+}
+
+.benefit-cards .card i {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #9b59b6;
+    transition: color 0.3s ease-in-out;
+}
+
+.benefit-cards .card:hover i {
+    color: #8e44ad;
+}
+
+/* TrustPilot-Bewertungen */
+.reviews {
+    background-color: #1a1a1a;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.reviews h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #ffffff;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.trustpilot-button {
+    font-size: 2em;
+    background-color: #2c2c2c;
+    margin: 0 auto 20px;
+    padding: 20px;
+    border-radius: 5px;    
+    max-width: 750px;
+    animation: fadeInUp 1s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.trustpilot-button:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    background-color: #3f2c47;
+    transform: translateY(-2px);
+    transform: scale(1.05);
+}
+
+/* Call to Action */
+.cta {
+    background-color: #9b59b6;
+    color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.cta a {
+    background-color: #ffffff;
+    color: #9b59b6;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.cta a:hover {
+    background-color: #8e44ad;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #2c2c2c;
+    color: #ffffff;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 20px;
+    justify-content: space-around;
+}
+
+.footer-section {
+    flex: 1 1 200px;
+    margin: 15px;
+}
+
+.footer-section h3 {
+    margin-bottom: 20px;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #ffffff;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-section ul li a:hover {
+    color: #9b59b6;
+}
+
+.footer-bottom {
+    background-color: #1a1a1a;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Support */
+
+.support {
+    text-align: center;
+    margin-top: 1em;
+}
+
+
+
+
+
+
+
+
+/* Produktkarten */
+.products {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #1a1a1a;
+}
+
+.products h1 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #ffffff;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.product-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-card {
+    background-color: #2c2c2c;
+    margin: 15px;
+    padding: 30px 20px;
+    border-radius: 5px;
+    flex: 1 1 300px;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.product-card h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.product-card ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.product-card ul li {
+    margin-bottom: 10px;
+    color: #bfbfbf;
+}
+
+.rent-button {
+    background-color: #9b59b6;
+    color: #ffffff;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.rent-button:hover {
+    background-color: #8e44ad;
+    transform: scale(1.05);
+}
+
+/* FAQ-spezifische Styles */
+.header-container {
+    background-color: #1a1a1a;
+    padding: 60px 20px;
+    text-align: center;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.header-container h1 {
+    font-size: 3em;
+    color: #A869C4;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.header-container p {
+    font-size: 1.2em;
+    color: #ffffff;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Navigation für FAQs */
+.faq-navigation {
+    background-color: #333;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.faq-navigation ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.faq-navigation li {
+    margin: 10px;
+}
+
+.faq-navigation .faq-category {
+    background: transparent;
+    border: 2px solid #555;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.faq-navigation .faq-category:hover,
+.faq-navigation .faq-category.active {
+    border-color: #d063ff;
+    color: #edc9fd;
+    box-shadow: 0 0 10px #d063ff, 0 0 20px #d063ff;
+    transform: scale(1.05);
+}
+
+/* FAQ-Inhalt */
+.faq-content {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.faq-section {
+    margin-bottom: 40px;
+}
+
+.faq-section h2 {
+    border-bottom: 2px solid #8e44ad;
+    padding-bottom: 10px;
+    font-size: 2em;
+    color: #A869C4;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.faq-item {
+    margin: 20px 0;
+    background-color: #2c2c2c;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.faq-item.active {
+    box-shadow: 0 0 15px #ba6ddb;
+}
+
+.faq-question {
+    background: #222;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    font-size: 1.1em;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;   
+}
+
+.faq-question:hover {
+    background: #ba6ddb;
+    color: #111;
+}
+
+.faq-question i {
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    background: #333;
+    padding: 0 15px;
+    border-left: 4px solid #8e44ad;
+}
+
+.faq-answer p {
+    padding: 15px 0;
+    color: #bfbfbf;
+}
+
+/* Anpassungen für mobile Geräte */
+@media (max-width: 768px) {
+    .faq-navigation ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .faq-navigation li {
+        margin: 5px 0;
+    }
+
+    .faq-section h2 {
+        font-size: 1.5em;
+    }
+}
+
+/* Dashboard */
+.dashboard {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.server-status {
+    margin-bottom: 40px;
+}
+
+.status-card {
+    background-color: #2c2c2c;
+    margin: 0 auto 20px;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 500px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.status-card:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+#restart-button {
+    background-color: #9b59b6;
+    color: #ffffff;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#restart-button:hover {
+    background-color: #8e44ad;
+    transform: scale(1.05);
+}
+
+.discord-integration {
+    background-color: #7289da;
+    color: #ffffff;
+    padding: 30px;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.discord-integration:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+#connect-discord {
+    background-color: #ffffff;
+    color: #7289da;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#connect-discord:hover {
+    background-color: #dcdcdc;
+    transform: scale(1.05);
+}
+
+/* Kontaktformular */
+.contact {
+    padding: 50px 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #1a1a1a;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #2c2c2c;
+    border: 1px solid #352f36;
+    color: #ffffff;
+    border-radius: 5px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #9b59b6;
+}
+
+.contact-form button {
+    background-color: #9b59b6;
+    color: #ffffff;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.contact-form button:hover {
+    background-color: #8e44ad;
+    transform: scale(1.05);
+}
+
+.legal h1 {
+    text-align: left;
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    animation: fadeInDown 1s ease-in-out;
+    color: #9b59b6;
+}
+.legal p {
+    font-size: 12.5pt;
+    line-height: 1.6;
+    animation: fadeInDown 1s ease-in-out;
+    color: #ffffff;
+    text-align: left;
+}
+
+.legal a {
+    color: #9b59b6;
+    font-size: 12.5pt;
+    line-height: 1.6;
+    animation: fadeInDown 1s ease-in-out;
+    text-decoration: none;
+}
+.legal a:hover {
+    text-decoration: underline;
+    font-size: 12.5pt;
+    line-height: 1.6;
+    animation: fadeInDown 1s ease-in-out;
+    color: #9b59b6
+}
+.legal h2 {
+    font-size: 20.5pt;
+    margin-bottom: 0.4em;
+    animation: fadeInDown 1s ease-in-out;
+    color: #9b59b6;
+    text-align: left;
+}
+.legal h3 {
+    font-size: 17.5pt;
+    margin-bottom: 0.3em;
+    animation: fadeInDown 1s ease-in-out;
+    color: #b1b1b1;
+    text-align: left;
+}
+/* Animationen */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Medienabfragen für mobile Geräte */
+@media (max-width: 768px) {
+    .benefit-cards,
+    .product-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero {
+        padding: 100px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
+
+    .cta-button {
+        font-size: 1em;
+    }
+}

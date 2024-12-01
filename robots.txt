@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /send_message.php
+Disallow: /server.js
+Disallow: /dashboard
+
+Sitemap: https://flimando.com/sitemap.xml
